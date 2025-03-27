@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const Home = () => {
   return (
     <main
-      className={`${inter.className} min-h-screen bg-gray-900 relative p-2 pb-0`}
+      className={`${inter.className} min-h-screen w-screen overflow-hidden bg-gray-900 relative p-2 pb-0 xl:px-8`}
     >
       <Header />
       <Hero />
