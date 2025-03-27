@@ -44,12 +44,12 @@ const Header = () => {
   return (
     <nav className="relative">
       {isOpen && (
-        <div className="fixed top-0 left-0 h-screen z-9 bg-gray-900 bg-opacity-50"></div>
+        <div className="md:hidden fixed top-0 left-0 h-screen w-screen z-9 bg-gray-900/70"></div>
       )}
 
       <div
         className={`${
-          isOpen ? "bg-white" : ""
+          isOpen ? "bg-white md:bg-inherit" : ""
         } rounded-lg absolute top-0 left-0 z-10 w-full pt-4`}
         ref={wrapperRef}
       >
@@ -101,7 +101,9 @@ const Header = () => {
         </div>
 
         <div
-          className={`md:hidden space-y-6 px-4 py-5 ${isOpen ? "" : "hidden"}`}
+          className={`md:hidden space-y-6 px-4 py-5 animated ${
+            isOpen ? "" : "hidden"
+          }`}
           id="mobile-menu"
         >
           <div className="space-y-1">
