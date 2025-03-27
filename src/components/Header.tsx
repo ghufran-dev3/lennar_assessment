@@ -12,7 +12,7 @@ const Routes = () => {
     <a
       key={key}
       href={route.href}
-      className="text-gray-700 md:text-white block md:inline-flex w-full md:w-auto px-2 md:px-1 py-2 md:py-0 text-gray-700 font-normal md:font-medium"
+      className="text-gray-700 md:text-white block md:inline-flex w-full md:w-auto px-2 md:px-1 py-2 md:py-0 font-normal md:font-medium"
     >
       {route.title}
     </a>
@@ -68,9 +68,18 @@ const Header = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="hidden md:ml-4 md:flex md:items-center">
-                <button className="bg-indigo-600 px-4 py-2 rounded-md text-white text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Sign Up
+              <div className="hidden space-x-2 md:flex md:items-center text-white text-base font-medium">
+                <button
+                  type="button"
+                  className="cursor-pointer px-4 py-2 rounded-md"
+                >
+                  Login
+                </button>
+                <button
+                  type="button"
+                  className="cursor-pointer bg-gray-600 px-4 py-2 rounded-md"
+                >
+                  Start free trial
                 </button>
               </div>
               <div className="flex items-center md:hidden">
@@ -101,7 +110,7 @@ const Header = () => {
 
           <a
             href="#"
-            className="flex items-center justify-center py-auto h-12 w-full bg-indigo-600 px-4 rounded-[6px] text-white text-base font-medium"
+            className="flex items-center justify-center h-12 w-full bg-indigo-600 px-4 rounded-[6px] text-white text-base font-medium"
           >
             Start Free Trial
           </a>
