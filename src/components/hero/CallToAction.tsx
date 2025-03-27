@@ -1,13 +1,32 @@
-const CallToAction = () => {
+import { useState } from "react";
+
+interface CallToActionProps {
+  handleCTAClick: (email: string) => void;
+}
+
+const CallToAction = (props: CallToActionProps) => {
+  const [email, setEmail] = useState("");
+
+  const handleClick = () => {
+    if (email !== "") props.handleCTAClick(email);
+
+    setEmail("");
+  };
+
   return (
-    <div className="w-full space-y-3 md:pt-12">
+    <div className="w-full space-y-3 md:pt-12 md:z-10">
       <div className="flex items-start justify-start flex-col md:flex-row space-y-3 space-x-3">
         <input
           type="text"
           className="w-full md:w-[360px] h-12 py-3 px-4 text-base bg-white placeholder:text-gray-500 text-black rounded-md"
           placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="cursor-pointer h-12 w-full md:w-[140px] bg-indigo-600 px-4 rounded-[6px] text-white text-base font-medium">
+        <button
+          onClick={handleClick}
+          className="cursor-pointer h-12 w-full md:w-[140px] bg-indigo-600 px-4 rounded-[6px] text-white text-base font-medium"
+        >
           Start free trial
         </button>
       </div>
