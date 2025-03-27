@@ -129,15 +129,3 @@ const Header = () => {
 };
 
 export default Header;
-
-{
-  /* <script>
-        // Simple toggle for mobile menu
-        document.querySelector('button[aria-expanded]').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script> */
-}
